@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ef9b0dde6d6d67c807dd09d9d87eb32",
+    "content-hash": "3858d5f4b96aa721b78168f19c601565",
     "packages": [
         {
             "name": "brick/math",
@@ -2393,6 +2393,77 @@
                 }
             ],
             "time": "2023-02-08T01:06:31+00:00"
+        },
+        {
+            "name": "pharaonic/laravel-seo",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Pharaonic/laravel-seo.git",
+                "reference": "44d94b5276bff57c95f68cab80ef54f8f8f21fe7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Pharaonic/laravel-seo/zipball/44d94b5276bff57c95f68cab80ef54f8f8f21fe7",
+                "reference": "44d94b5276bff57c95f68cab80ef54f8f8f21fe7",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": ">=6.0",
+                "php": ">=7.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Pharaonic\\Laravel\\SEO\\SEOServiceProvider"
+                    ],
+                    "aliases": {
+                        "SEO": "Pharaonic\\Laravel\\SEO\\SEO"
+                    }
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helper.php"
+                ],
+                "psr-4": {
+                    "Pharaonic\\Laravel\\SEO\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moamen Eltouny (Raggi)",
+                    "email": "raggi@raggitech.com"
+                }
+            ],
+            "description": "SEO generates meta tags with quick and easy functions & blade directives.",
+            "keywords": [
+                "laravel",
+                "laravel seo",
+                "meta tags",
+                "php",
+                "php seo"
+            ],
+            "support": {
+                "issues": "https://github.com/Pharaonic/laravel-seo/issues",
+                "source": "https://github.com/Pharaonic/laravel-seo/tree/1.1.0"
+            },
+            "funding": [
+                {
+                    "url": "https://liberapay.com/Pharaonic",
+                    "type": "liberapay"
+                },
+                {
+                    "url": "https://www.patreon.com/Pharaonic",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-05-31T08:05:04+00:00"
         },
         {
             "name": "phpoption/phpoption",

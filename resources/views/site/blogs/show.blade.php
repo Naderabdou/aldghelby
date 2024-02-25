@@ -1,6 +1,9 @@
 @extends('site.layouts.app')
 @section('title', __('تفاصيل الخبر'))
-
+@title($blog->title)
+@description(Str::limit($blog->desc, 160))
+@keywords(implode(',', json_decode(getSetting('keyword', app()->getLocale())->value)))
+@image($blog->image_path)
 @section('breadcrumb')
     <div class="title-page">
         <div class="main-container">
@@ -42,7 +45,7 @@
                             <ul>
                                 @foreach($popularBlogs as $popularBlog)
                                     <li>
-                                        <a href="{{ route('site.blog.show',$popularBlog->id) }}">
+                                        <a  class="{{ $blog->id === $popularBlog->id ? "active" : "" }}" href="{{ route('site.blog.show',$popularBlog->id) }}">
                                             {{ $popularBlog->title }} <i class="bi bi-arrow-left"></i>
                                         </a>
                                     </li>
@@ -50,7 +53,8 @@
                             </ul>
                         </div>
                     @else
-                        <div class="more-details d-flex justify-content-center align-items-center">
+                        <div class="notFound">
+                            <img src="{{ asset('site/images/notFound.png') }}">
                             <h2>{{ __('لا يوجد أخبار آخرى') }}</h2>
                         </div>
                     @endif

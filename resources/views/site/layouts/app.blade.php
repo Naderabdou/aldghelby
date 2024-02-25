@@ -17,6 +17,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="msapplication-TileColor" content="">
+    <link rel="shortcut icon" href="{{ asset('site/images/title.png') }}">
+    @seo
 
     <!-- ================================ Style Section ================================ -->
     @include('site.layouts.partials.style')

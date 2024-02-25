@@ -1,6 +1,9 @@
 @extends('site.layouts.app')
 @section('title', __('تفاصيل الخدمة'))
-
+@title($service->name)
+@description(Str::limit( $service->desc, 160))
+@keywords(implode(',', json_decode(getSetting('keyword', app()->getLocale())->value)))
+@image($service->image_path)
 @section('breadcrumb')
     <div class="title-page">
         <div class="main-container">

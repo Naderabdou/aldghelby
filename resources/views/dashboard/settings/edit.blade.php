@@ -258,6 +258,22 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    @elseif($setting->type == 'keyword')
+                                                    <div class="col-6">
+                                                        <div class="form-group">
+                                                            <label class="form-label"
+                                                                for="{{ $setting->key }}">{{ __($setting->neckname) }}</label>
+                                                            <select class="form-control w-100 js-select-dynamic" multiple="multiple"
+                                                                name="{{ $setting->key }}[]" id="{{ $setting->key }}">
+                                                                @if(json_decode($setting->value) != null)
+                                                                    @foreach (json_decode($setting->value) as $item)
+                                                                        <option selected>{{ $item }}</option>
+                                                                    @endforeach
+                                                                @endif
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
                                                 @elseif($setting->key == 'address')
                                                     <div class="col-md-12">
                                                         <div class="form-group">
@@ -324,6 +340,12 @@
         <script src="{{ url('utils.js') }}" type="text/javascript"></script> --}}
 
         <script>
+  $(".js-select-dynamic").select2({
+        tags: true,
+        width: '100%',
+        tokenSeparators: [',', ' ']
+    });
+
             $(document).on('click', '.remove-btn', function(e) {
                 e.preventDefault();
                 $(this).closest('.row').remove();

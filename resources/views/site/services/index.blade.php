@@ -1,6 +1,9 @@
 @extends('site.layouts.app')
 @section('title', __('خدمات المكتب'))
-
+@title(getSetting('seo_title', app()->getLocale())->value)
+@description(Str::limit(getSetting('desc_seo', app()->getLocale())->value, 160))
+@keywords(implode(',', json_decode(getSetting('keyword', app()->getLocale())->value)))
+@image(asset(getSetting('logo', app()->getLocale())->value))
 @section('breadcrumb')
     <div class="title-page">
         <div class="main-container">

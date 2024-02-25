@@ -1,5 +1,10 @@
 @extends('site.layouts.app')
 @section('title', __('عن المكتب'))
+@title(getSetting('home_about', app()->getLocale())->value)
+@description(Str::limit(getSetting('about_desc_header', app()->getLocale())->value, 160))
+@keywords(implode(',', json_decode(getSetting('keyword', app()->getLocale())->value)))
+@image(asset(getSetting('image_about_header')->value))
+
 
 @section('breadcrumb')
     <div class="title-page">

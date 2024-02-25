@@ -40,17 +40,16 @@
                 <div class="element-footer">
                     <h2>{{ __('الخدمات') }}</h2>
                     <ul>
-                        @forelse ( $servicesFooter as $serviceFooter )
-                              <li><a
-                            href="{{ route('site.service.show', $serviceFooter->id) }}">{{ $serviceFooter->name }}</a>
+                        @forelse ($servicesFooter as $serviceFooter)
+                            <li><a
+                                    href="{{ route('site.service.show', $serviceFooter->id) }}">{{ $serviceFooter->name }}</a>
                             </li>
                         @empty
-                        <div class="col-12 d-flex justify-content-center align-items-center notFound">
-                            {{-- <img src="{{ asset('site/images/not.png') }}"> --}}
+                            <div class="col-12 d-flex justify-content-center align-items-center notFound">
+                                {{-- <img src="{{ asset('site/images/not.png') }}"> --}}
 
-                            <h2>{{ __('لايوجد خدمات') }} </h2>
-                        </div>
-
+                                <h2>{{ __('لايوجد خدمات') }} </h2>
+                            </div>
                         @endforelse
 
 
@@ -69,6 +68,7 @@
                                 <div class="text-element-contect">
                                     <h4>{{ __('اتصل بنا') }}</h4>
                                     <p>0566772077 - 0114903977 </p>
+
                                 </div>
                             </a>
                         </li>
@@ -98,7 +98,8 @@
         </div>
         <div class="end-page">
             <p>
-                {{ __('كل الحقوق محفوظة') }} {{ getSetting('main_fullname',app()->getLocale())->value }} &copy; {{ date('Y') }}
+                {{ __('كل الحقوق محفوظة') }} {{ getSetting('main_fullname', app()->getLocale())->value }} &copy;
+                {{ date('Y') }}
             </p>
             <a href=""> {{ __('صنع بكل حب') }} <i class="bi bi-heart-fill"></i> {{ __('في معامل جدارة') }} </a>
         </div>
