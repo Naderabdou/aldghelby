@@ -211,40 +211,40 @@ class SettingTableSeeder extends Seeder
                 'value'    => "The office provides its legal services to a broad spectrum of clients through a team of skilled lawyers and legal advisors in the Kingdom of Saudi Arabia. Consequently, and believing in the management's need to align with the best international and local experiences in providing distinguished services to clients on all levels, the office has been transformed into a professional company under the name 'Daghloubi Law Firm Lawyers and Consultants.' This transformation was followed by a comprehensive and integrated change in the working mechanisms and ease of communication, with the aim of serving clients in the best possible manner and achieving their satisfaction on all fronts.
                 Our deep knowledge of Saudi regulations, coupled with our legal and practical experience, gives us a comprehensive and advanced understanding to provide valuable legal consultations at the highest level, with a strategy and vision that serve the client's desires and objectives. We work closely with our clients to accomplish their tasks, aiming to adapt our services into favorable solutions that meet their business requirements."
             ],
-          [
+            [
 
                 'key'      => 'years_of_history',
                 'neckname' => 'سنوات تاريخنا',
                 'type'     => 'number',
                 'value'    => '80',
-             ],
+            ],
 
-             [
+            [
 
                 'key'      => 'years_of_experience',
                 'neckname' => 'سنوات من الخبرة',
                 'type'     => 'number',
                 'value'    => '10',
-             ],
+            ],
 
-             [
+            [
 
                 'key'      => 'number_of_lawyers',
                 'neckname' => 'كام محامي في الفريق',
                 'type'     => 'number',
                 'value'    => '200',
-             ],
+            ],
 
 
-             [
+            [
 
                 'key'      => 'number_of_success_cases',
                 'neckname' => 'كام قضية ناجحة',
                 'type'     => 'number',
                 'value'    => '80',
-             ],
+            ],
 
-             [
+            [
 
                 'key'      => 'image_about_header',
                 'neckname' => 'الصوره الاوله لنبذا عنا',
@@ -283,25 +283,25 @@ class SettingTableSeeder extends Seeder
             ],
             [
 
-            'key'      => 'goals_ar',
-            'neckname' => 'اهدفنا باللغه العربيه',
-            'type'     => 'textarea',
-            'value'    => 'توفير أعلي مستوي من الجودة للخدمات القانونية التي تتيح لنا أن نكون جزءا أساسيا في نجاح عملائنا ، ولرفع مستوي ممارسة القانون في المملكة العربية السعودية
+                'key'      => 'goals_ar',
+                'neckname' => 'اهدفنا باللغه العربيه',
+                'type'     => 'textarea',
+                'value'    => 'توفير أعلي مستوي من الجودة للخدمات القانونية التي تتيح لنا أن نكون جزءا أساسيا في نجاح عملائنا ، ولرفع مستوي ممارسة القانون في المملكة العربية السعودية
             '
             ],
 
-        [
-            'key'      => 'goals_en',
-            'neckname' => 'اهدفنا باللغه الانجليزيه',
-            'type'     => 'textarea',
-            'value'    => "Providing the highest level of quality in legal services that enables us to be an integral part of our clients' success and to elevate the practice of law in the Kingdom of Saudi Arabia.
+            [
+                'key'      => 'goals_en',
+                'neckname' => 'اهدفنا باللغه الانجليزيه',
+                'type'     => 'textarea',
+                'value'    => "Providing the highest level of quality in legal services that enables us to be an integral part of our clients' success and to elevate the practice of law in the Kingdom of Saudi Arabia.
             "
-        ],
-             [
-            'key'      => 'cover_video_about',
-            'neckname' => 'صور غلاف الفيديو نبذا عنا',
-            'type'     => 'file',
-            'value'    => 'setting/logo.png',
+            ],
+            [
+                'key'      => 'cover_video_about',
+                'neckname' => 'صور غلاف الفيديو نبذا عنا',
+                'type'     => 'file',
+                'value'    => 'setting/logo.png',
             ],
             [
                 'key'      => 'link_video_about',
@@ -481,8 +481,8 @@ class SettingTableSeeder extends Seeder
                 'value' => 'https://instagram.com',
             ],
             [
-                'key' => 'linkedin',
-                'neckname' => 'لينكدان',
+                'key' => 'snapchat',
+                'neckname' => 'سناب شات',
                 'type' => 'text',
                 'value' => 'https://linkedin.com',
             ],
