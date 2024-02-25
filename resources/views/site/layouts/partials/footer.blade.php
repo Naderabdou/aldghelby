@@ -63,14 +63,18 @@
                     <h2>{{ __('بيانات التواصل') }}</h2>
                     <ul class="element-contect">
                         <li>
-                            <a href="tel:{{ getSetting('phone')->value }}">
                                 <img src="{{ asset('site/images/call.png') }}" alt="">
                                 <div class="text-element-contect">
                                     <h4>{{ __('اتصل بنا') }}</h4>
-                                    <p>0566772077 - 0114903977 </p>
+                                    <p>
+                                        <a href="tel:{{ getSetting('phone')->value }}">{{ getSetting('phone')->value }}</a> -
+                                        <a href="tel:{{ getSetting('phone_other')->value }}">{{ getSetting('phone_other')->value }}</a>
+
+
+
+                                    </p>
 
                                 </div>
-                            </a>
                         </li>
                         <li>
                             <a target="__blank" href="mailto::{{ getSetting('email')->value }}">
@@ -82,7 +86,7 @@
                             </a>
                         </li>
                         <li>
-                            <<a target="__blank"
+                            <a target="__blank"
                                 href="https://www.google.com/maps?q={{ getSetting('lat')->value }},{{ getSetting('lng')->value }}">
                                 <img src="{{ asset('site/images/location.png') }}" alt="">
                                 <div class="text-element-contect">

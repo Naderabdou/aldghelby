@@ -29,17 +29,26 @@
   border-bottom: 1px solid var(--color-Primary1);
 }
 .element-footer ul {
+    color: #fff;
   margin: 20px 0;
 }
-.element-contect a {
+.element-contect a  ,.element-contect li {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 .element-contect p {
   color: var(--color-white);
+  display: flex;
+gap: 10px;
 }
-
+.element-contect  li a {
+    font-family: "Light";
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin: 0 !important;
+}
 .element-contect a img {
   max-width: 30px;
   height: auto;
