@@ -123,8 +123,11 @@
                         <a href="{{ route('site.service.show', $service->id) }}"><i class="bi bi-arrow-left"></i></a>
                     </div>
                 @empty
-                    <div class="col-12 d-flex justify-content-center align-items-center notFound">
-                        <h4>{{ __('لايوجد خدمات') }} </h4>
+                    <div class="notFound">
+                        {{-- <img src="{{ asset('site/images/not.png') }}"> --}}
+                        <img src="{{ asset('site/images/notFound.png') }}">
+
+                        <h2>{{ __('لايوجد خدمات') }} </h2>
                     </div>
                 @endforelse
 
@@ -156,21 +159,30 @@
                         <span></span>
                     </div>
                     <div class="owl-carousel owl-theme maincarousel" id="slider-customers">
-                       @foreach ($clients as $client)
+                       @forelse ($clients as $client)
                        <div class="item">
-                           <div class="sub-slider-customers">
-                            <p>
-                                {{ $client->desc }}
-                            </p>
-                            <div class="user-customers">
-                                <div class="img-users">
-                                    <img src="{{ $client->image_path }}" alt="">
-                                </div>
-                                <h2>{{ $client->name }}</h2>
-                            </div>
-                            </div>
-                       </div>
-                       @endforeach
+                             <div class="sub-slider-customers">
+                                 <p>
+                                    {{ $client->desc }}
+                                </p>
+                              <div class="user-customers">
+                                      <div class="img-users">
+                                         <img src="{{ $client->image_path }}" alt="">
+                                        </div>
+                                    <h2>{{ $client->name }}</h2>
+                              </div>
+                         </div>
+                    </div>
+                       @empty
+                       <div class="notFound">
+                        {{-- <img src="{{ asset('site/images/not.png') }}"> --}}
+                        <img src="{{ asset('site/images/notFound.png') }}">
+
+                        <h2>{{ __('لايوجد اراء عملاء') }} </h2>
+                    </div>
+                       @endforelse
+
+
 
 
 
@@ -214,8 +226,11 @@
                         </div>
                     </div>
                 @empty
-                    <div class="col-12 d-flex justify-content-center align-items-center notFound">
-                        <h4>{{ __('لا يوجد اخبار') }} </h4>
+                    <div class="notFound">
+                        {{-- <img src="{{ asset('site/images/not.png') }}"> --}}
+                        <img src="{{ asset('site/images/notFound.png') }}">
+
+                        <h2>{{ __('لا يوجد اخبار') }} </h2>
                     </div>
                 @endforelse
 

@@ -94,7 +94,7 @@ class SettingController extends Controller
             Storage::delete($cover_video_about);
 
             // Upload new internal_image
-            $attribute['logo_main_en'] = $request->file('cover_video_about')->store('setting', 'public');
+            $attribute['cover_video_about'] = $request->file('cover_video_about')->store('setting', 'public');
         }
 
 

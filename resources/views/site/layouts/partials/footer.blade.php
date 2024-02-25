@@ -40,11 +40,20 @@
                 <div class="element-footer">
                     <h2>{{ __('الخدمات') }}</h2>
                     <ul>
-                        @foreach ($servicesFooter as $serviceFooter)
-                            <li><a
-                                    href="{{ route('site.service.show', $serviceFooter->id) }}">{{ $serviceFooter->name }}</a>
+                        @forelse ( $servicesFooter as $serviceFooter )
+                              <li><a
+                            href="{{ route('site.service.show', $serviceFooter->id) }}">{{ $serviceFooter->name }}</a>
                             </li>
-                        @endforeach
+                        @empty
+                        <div class="col-12 d-flex justify-content-center align-items-center notFound">
+                            {{-- <img src="{{ asset('site/images/not.png') }}"> --}}
+
+                            <h2>{{ __('لايوجد خدمات') }} </h2>
+                        </div>
+
+                        @endforelse
+
+
 
 
                     </ul>

@@ -182,6 +182,8 @@
 
 
                     },
+
+
                     error: function(data) {
                         $('.error-message').text('');
                         // Display validation errors under each input
@@ -189,14 +191,21 @@
                         $.each(errors, function(field, messages) {
                             var errorMessage = messages.join(', ');
                             //  console.log('#' + field + '_error');
-                            $('#' + field + '_error_services').text(errorMessage);
+                            var errorElement = $('#' + field + '_error_services');
+                            errorElement.text(errorMessage);
 
+                            // Remove the error message after 1 minute
+                            setTimeout(function() {
+                                errorElement.text('');
+                            }, 6000);
                         });
 
                         $('#services_submit').removeClass('ctm-btn-send').addClass('ctm-btn')
                         $('#services_submit').prop('disabled', false);
-
                     },
+
+
+
 
                 });
             });

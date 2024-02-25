@@ -119,7 +119,7 @@
         <div class="main-v-aboutus mr-section">
             <div class="main-container">
                 <div class="video-about">
-                    <img src="{{ asset('site/images/bg-v.png') }}" alt="">
+                    <img src="{{ asset(getSetting('cover_video_about')->value) }}" alt="">
                     <div class="btn-play-video">
                         <a class="lvideo"
                             data-url="https://www.youtube.com/watch?v=Dxh4gTI88PA&list=PLF8OvnCBlEY3kbFivlWbtoDCNjo4qRAZd&index=10">

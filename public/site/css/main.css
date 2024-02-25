@@ -41,6 +41,27 @@
   align-items: center;
   justify-content: flex-end;
 }
+
+
+.notFound {
+    text-align: center;
+}
+.notFound img {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+
+}
+
+
+
+.notFound h2 {
+    font-size: 30px;
+    color: var(--color-Primary2);
+    margin: 20px 0;
+}
+
 .img-hero img {
   width: 90% !important;
   height: 100%;
@@ -1014,7 +1035,7 @@ button.owl-next {
 
 .sub-counter-service h2 {
   color: var(--color-Primary2);
-  
+
 }
 
 .oreder-servces {

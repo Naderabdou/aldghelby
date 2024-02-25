@@ -37,8 +37,11 @@
                 </div>
 
                  @empty
-                 <div class="col-12 d-flex justify-content-center align-items-center notFound">
-                    <h4>{{ __('لايوجد خدمات') }} </h4>
+                 <div class="notFound">
+                    {{-- <img src="{{ asset('site/images/not.png') }}"> --}}
+                    <img src="{{ asset('site/images/notFound.png') }}">
+
+                    <h2>{{ __('لايوجد خدمات') }} </h2>
                 </div>
 
                  @endforelse
