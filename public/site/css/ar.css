@@ -1,0 +1,8 @@
+body {
+    text-align: right;
+    direction: rtl;
+}
+
+.sub-container {
+    margin-right: auto;
+}
