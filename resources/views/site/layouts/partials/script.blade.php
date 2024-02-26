@@ -17,8 +17,9 @@
 <script src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
 <script src="{{ asset('site/js/locomotive-scroll.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('site/js/index.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 @endif
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 @stack('js')
 <script>
     $(document).ready(function() {

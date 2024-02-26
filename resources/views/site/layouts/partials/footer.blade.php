@@ -45,10 +45,10 @@
                                     href="{{ route('site.service.show', $serviceFooter->id) }}">{{ $serviceFooter->name }}</a>
                             </li>
                         @empty
-                            <div class="col-12 d-flex justify-content-center align-items-center notFound">
+                            <div class="notFound">
                                 {{-- <img src="{{ asset('site/images/not.png') }}"> --}}
 
-                                <h2>{{ __('لايوجد خدمات') }} </h2>
+                                <a>{{ __('لايوجد خدمات') }} </a>
                             </div>
                         @endforelse
 
